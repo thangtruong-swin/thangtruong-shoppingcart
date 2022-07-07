@@ -4,8 +4,6 @@ import { useParams } from "react-router-dom";
 import { getProductsType } from './services';
 import listProducts from '../data';
 
-
-
 export default function DetailPage({handleClick}) {
   // let params = useParams();
   let { id } = useParams();
@@ -14,7 +12,7 @@ export default function DetailPage({handleClick}) {
     return item.type === id;
   })
   const getItemsByType = getProductsType(id);
-  console.log(filteredProducts);
+  // console.log(filteredProducts);
   return (
       <main style={{ padding: "1rem" }}>
         {/* <h2>Hello: {id}</h2> */}
