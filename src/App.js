@@ -33,7 +33,7 @@ const App= () => {
      <NavBar size={cart.length} />
       <Routes>
           {/* <Route path="/" element={  <NavBar size={cart.length} />} /> */}
-          <Route path="/desktop/:id" element={<DetailPage />} />
+          <Route path="/desktop/:id" element={<DetailPage handleClick={handleClick} />} />
           <Route path="/" element={<ListAllProducts handleClick={handleClick} />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="/cart" element={<Cart cart={cart} setCart={setCart} handleChange={handleChange}/>} />

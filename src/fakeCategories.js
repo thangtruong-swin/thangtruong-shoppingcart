@@ -1,28 +1,28 @@
 export const desktopCategories = [
-  { _id: "A001", name: "iMac" },
-  { _id: "A002", name: "Mac-Mini" },
-  { _id: "A003", name: "Dell" },
-  { _id: "A003", name: "HP" },
-  { _id: "A003", name: "Acer" },
-  { _id: "A003", name: "Asus" }
+  { _id: "D001", name: "iMac" },
+  { _id: "D002", name: "Mac-Mini" },
+  { _id: "D003", name: "Dell" },
+  { _id: "D004", name: "HP" },
+  { _id: "D005", name: "Acer" },
+  { _id: "D006", name: "Asus" }
 ];
 
 export const laptopCategories = [
-  { _id: "A001", name: "Macbook Pro" },
-  { _id: "A002", name: "Macbook Air" },
-  { _id: "A003", name: "Dell" },
-  { _id: "A003", name: "HP" },
-  { _id: "A003", name: "Acer" },
-  { _id: "A003", name: "Asus" }
+  { _id: "L001", name: "Macbook-Pro" },
+  { _id: "L002", name: "Macbook-Air" },
+  { _id: "L003", name: "Dell" },
+  { _id: "L004", name: "HP" },
+  { _id: "L005", name: "Acer" },
+  { _id: "L006", name: "Asus" }
 ];
 
 export const mobileCategories = [
-  { _id: "A001", name: "iPhone" },
-  { _id: "A002", name: "Samsung" },
-  { _id: "A003", name: "OPPO" },
-  { _id: "A003", name: "LG" },
-  { _id: "A003", name: "Google" },
-  { _id: "A003", name: "Nokia" }
+  { _id: "M001", name: "iPhone" },
+  { _id: "M002", name: "Samsung" },
+  { _id: "M003", name: "OPPO" },
+  { _id: "M004", name: "LG" },
+  { _id: "M005", name: "Google" },
+  { _id: "M006", name: "Nokia" }
 ];
 
 export function getDesktopCategories() {
@@ -34,5 +34,5 @@ export function getLaptopCategories() {
 }
 
 export function getMobileCategories() {
-  return mobileCategories.filter(lap => lap);
+  return mobileCategories.filter(mol => mol);
 }

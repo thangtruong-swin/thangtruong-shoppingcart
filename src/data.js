@@ -48,7 +48,7 @@ const listProducts = [
 	{
 		id: 		"AA0005",
 		category: 	"Desktop",
-		type: 		"Mac Mini",
+		type: 		"Mac-Mini",
 		product: 	"MacMini Apple Chip M1",
 		description:"With 8-Core CPU & 8-Core GPU 8GB Unified memory 256GB Storage",
 		price: 		 929,
@@ -58,7 +58,7 @@ const listProducts = [
 	{
 		id: 		"AA0006",
 		category: 	"Desktop",
-		type: 		"Mac Mini",
+		type: 		"Mac-Mini",
 		product: 	"MacMini Apple Chip M1",
 		description:"With 8-Core CPU & 8-Core GPU 16GB Unified memory 256GB Storage",
 		price: 		 1199,
@@ -68,7 +68,7 @@ const listProducts = [
 	{
 		id: 		"AA0007",
 		category: 	"Desktop",
-		type: 		"Mac Mini",
+		type: 		"Mac-Mini",
 		product: 	"MacMini Apple Chip M1",
 		description:"With 8-Core CPU & 8-Core GPU 16GB Unified memory 512GB Storage",
 		price: 		 1499,
@@ -78,7 +78,7 @@ const listProducts = [
 	{
 		id: 		"AA0008",
 		category: 	"Desktop",
-		type: 		"Mac Mini",
+		type: 		"Mac-Mini",
 		product: 	"MacMini Apple Chip M1",
 		description:"With 8-Core CPU & 8-Core GPU 16GB Unified memory 1TB Storage",
 		price: 		 1899,

@@ -1,22 +1,29 @@
+import Cards from './cards';
+import React from 'react';
 import { useParams } from "react-router-dom";
 import { getProductsType } from './services';
+import listProducts from '../data';
 
 
-export default function DetailPage() {
+
+export default function DetailPage({handleClick}) {
   // let params = useParams();
-  let {id} = useParams();
-  // let getItemsByType = getProductsType();
+  let { id } = useParams();
 
+  const filteredProducts = listProducts.filter(function (item) {
+    return item.type === id;
+  })
+  const getItemsByType = getProductsType(id);
+  console.log(filteredProducts);
   return (
-    <div>
       <main style={{ padding: "1rem" }}>
-      <h2>Hello: {id}</h2>
-{/* 
-      <h2>Total Due: {params.name}</h2>
-      <p>
-        {params.name}: {params._id}
-      </p> */}
+        {/* <h2>Hello: {id}</h2> */}
+      <div className="listproducts container">
+        {filteredProducts.map((item) => (
+              <Cards key={item.id} item={item} handleClick={handleClick} />
+        ))}
+      </div>
     </main>
-    </div>
+    
   );
 }
