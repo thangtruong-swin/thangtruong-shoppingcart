@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
 
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto Slab', serif;
+  /* font-size: small; */
 }
 
 .navBar1 {
@@ -56,12 +57,22 @@ body {
   right: 400px;
 }
 
+
+.fixFooter {
+  /* margin-top: 5rem; */
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+  right: 0;
+  overflow: hidden;
+  /* width: 100%; */
+}
+
 @media screen and (max-width: 991px) {
 
-  .footer {
+  .fixFooter {
     display: none;
   }
-
 
 
   .nav-item span {
@@ -82,27 +93,16 @@ body {
   }
 }
 
-.footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center;
-  line-height: 3rem;
-  margin-top: 3rem;
-}
-
-
-
-
 .listproducts {
   /* min-height: 100vh; */
-  padding-top: 2rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 5rem;
+  gap: 1.5rem 4rem;
   align-content: center;
-  justify-content: center;
+  /* margin-left: 17rem; */
+  justify-content: space-evenly;
 }
 
 .cards {
@@ -117,8 +117,7 @@ body {
 .image_box img {
   justify-content: center;
   width: 200px;
-  height: 150px;
-  border-radius: 10%;
+  height: 140px;
   cursor: pointer;
   transition: all ease;
 }

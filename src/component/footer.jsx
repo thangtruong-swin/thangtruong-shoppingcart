@@ -2,13 +2,26 @@ import React, { Component } from 'react';
 
 const Footer = () => {
   return ( 
-      <div class=" footer text-bg-dark">
-        <a href="#" class="youtube"><i class="fa fa-youtube"> Youtube</i></a>
-        <a href="#" class="facebook"><i class="fa fa-facebook"> facebook</i></a>
-        <a href="#" class="linkedin"><i class="fa fa-linkedin"> linkedin</i></a>
-        <a href="#" class="twitter"><i class="fa fa-twitter"> twitter</i></a>
-        <a href="#" class="google"><i class="fa fa-google"> google</i></a>
+    <footer className='fixFooter text-bg-success p-2 mt-3 text-left text-dark fs-5 '>
+      <main>
+        <div className="row">
+        <div className="col ">
+          <p><i className="fa-solid fa-user mx-3"></i> Thang Truong</p>
+          <p ><i className="fa-solid fa-envelope mx-3"></i> <a className='text-dark' href="mailto:thang.truong.swin@gmail.com">thang.truong.swin@gmail.com</a></p>
+        </div>
+        <div className='col' >
+          <p><i class="fa-solid fa-check me-3"></i>Shopping Cart written by ReactJS</p>
+          <p><i class="fa-solid fa-check me-3"></i>Dynamic value and Layout</p>
+        </div>
+         <div className='col' >
+          <p><i class="fa-solid fa-check me-3"></i>Load data from JS file</p>
+          <p><i class="fa-solid fa-check me-3"></i>Fullfilled CRUD Operation</p>
+         </div>
       </div>
+      </main>
+     
+    </footer>
+   
    );
 }
  

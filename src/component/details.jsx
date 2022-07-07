@@ -14,7 +14,7 @@ export default function DetailPage({handleClick}) {
   const getItemsByType = getProductsType(id);
   // console.log(filteredProducts);
   return (
-      <main style={{ padding: "1rem" }}>
+      <main style={{ padding: "1rem" }} className='container'>
         {/* <h2>Hello: {id}</h2> */}
       <div className="listproducts container">
         {filteredProducts.map((item) => (

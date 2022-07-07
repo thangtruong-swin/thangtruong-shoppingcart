@@ -8,7 +8,8 @@ const NavBar = ({ size }) => {
   let mobileCategories = getMobileCategories();
   return (  
     <div>
-      <div className="navBar1 sticky-top">
+      
+      <div className="navBar1 ">
         <a href="#">
           <i className="fa-solid fa-truck"></i>
           Free Delivery</a>
@@ -60,7 +61,8 @@ const NavBar = ({ size }) => {
                     <div key={cat.name}>
                       <li>
                         <a className="dropdown-item">
-                          <Link
+                          <Link 
+                              className='dropdown-item'
                               key={cat._id}
                               to={`/desktop/${cat.name}`}
                             >
@@ -71,15 +73,6 @@ const NavBar = ({ size }) => {
                     </div>
                   ))}
                  </ul>
-              {/* <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a className="dropdown-item" href="#">iMac</a></li>
-                <li><a className="dropdown-item" href="#">Mac-Mini</a></li>
-                <li><a className="dropdown-item" href="#">Dell</a></li>
-                <li><hr className="dropdown-divider" /></li>
-                <li><a className="dropdown-item" href="#">HP</a></li>
-                <li><a className="dropdown-item" href="#">Acer</a></li>
-                <li><a className="dropdown-item" href="#">Asus</a></li>
-              </ul> */}
         </li>
           <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -94,13 +87,6 @@ const NavBar = ({ size }) => {
                         </li>
                   ))}
                 </ul>
-                {/* <li><a className="dropdown-item" href="#">Macbook Pro</a></li>
-                    <li><a className="dropdown-item" href="#">Macbook Air</a></li>
-                    <li><a className="dropdown-item" href="#">Dell</a></li>
-                    <li><hr className="dropdown-divider" /></li>
-                    <li><a className="dropdown-item" href="#">HP</a></li>
-                    <li><a className="dropdown-item" href="#">Acer</a></li>
-                    <li><a className="dropdown-item" href="#">Asus</a></li> */}
           </li>
               
           <li className="nav-item dropdown">
@@ -142,6 +128,7 @@ const NavBar = ({ size }) => {
       </nav>
 
       {/* <ListAllProducts handleClick={handleClick} /> */}
+
   </div>
   );
 }
