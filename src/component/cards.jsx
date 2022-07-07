@@ -9,12 +9,10 @@ const Cards = ({ item, handleClick }) => {
             <img src={image} alt="{type}" />
           </div>
           <div className="details">
-            {/* <p>{id}</p> */}
-            {/* <p>{category}</p> */}
-        <p className='text-center mt-2 text-primary'>{category + " - "}{ type }</p>
+            <p className='text-center mt-2 text-primary'>{category + " - "}{ type }</p>
             <p>{product}</p>
-            <p>{description}</p>
-            <p className='fw-bold'>Price - ${price}</p>
+        <p>{description}</p>
+            <p className='fw-bold'>Price - ${price.toFixed(2)}</p>
         <button className='btn btn-success'
         onClick={() => handleClick(item)}
         >Add to Cart</button>

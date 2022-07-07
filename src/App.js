@@ -1,14 +1,14 @@
 import './App.css';
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Routes, Route, } from "react-router-dom";
 
 import NavBar from './component/navBar';
 import ListAllProducts from './component/listAllProducts';
 import Cart from './component/cart';
-import Footer from './component/footer';
 import NewArrivalProducts from './component/newArrival';
 import PageNotFound from './component/pageNotFound';
 import PageOnSale from './component/onSale';
+import DetailPage from './component/details';
 
 const App= () => {
   // const [show, setShow] = useState(true);
@@ -30,9 +30,11 @@ const App= () => {
   
   return (
     <div >
-      <NavBar size={cart.length} />
+     <NavBar size={cart.length} />
       <Routes>
-          <Route path="/"  element={<ListAllProducts handleClick={handleClick} />} />
+          {/* <Route path="/" element={  <NavBar size={cart.length} />} /> */}
+          <Route path="/desktop/:id" element={<DetailPage />} />
+          <Route path="/" element={<ListAllProducts handleClick={handleClick} />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="/cart" element={<Cart cart={cart} setCart={setCart} handleChange={handleChange}/>} />
           <Route path="newarrivalproducts" element={<NewArrivalProducts />} />
