@@ -49,13 +49,6 @@ const NavBar = ({ size }) => {
                   <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown"   role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Desktop
                 </a>
-                   {/* <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  {desktopCategories.map((cat) => (
-                  <a className="dropdown-item"  key={cat.category}>
-                      {cat.type}
-                  </a>
-                  ))}
-                 </ul> */}
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   {desktopCategories.map((cat) => (
                     <div key={cat.name}>
@@ -102,17 +95,8 @@ const NavBar = ({ size }) => {
                     </li>
                   ))}
                 </ul>
-{/*                 
-                 <li><a className="dropdown-item" href="#">iPhone</a></li>
-              <li><a className="dropdown-item" href="#">Samsung</a></li>
-              <li><a className="dropdown-item" href="#">OPPO</a></li>
-              <li><hr className="dropdown-divider" /></li>
-              <li><a className="dropdown-item" href="#">LG</a></li>
-              <li><a className="dropdown-item" href="#">Google</a></li>
-              <li><a className="dropdown-item" href="#">Nokia</a></li> */}
           </li>
               
-
         <li className="navbar-brand nav-item">
           <Link to="/cart" className="nav-link "><i className="fa-solid fa-cart-shopping"></i></Link>
           <span className='position-absolute badge rounded-pill text-bg-info'>
@@ -121,7 +105,7 @@ const NavBar = ({ size }) => {
       </ul>
       <form className="d-flex" role="search">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        <button className="btn btn-outline-success" type="submit">Search</button>
+        <button className="btn btn-outline-warning text-dark" type="submit">Search</button>
       </form>
           </div>
         </div>

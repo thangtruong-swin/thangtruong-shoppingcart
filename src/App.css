@@ -4,7 +4,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Roboto Slab', serif;
-  /* font-size: small; */
+  font-size: small;
 }
 
 .navBar1 {
@@ -12,6 +12,7 @@ body {
   overflow: hidden;
   width: 100%;
   color: white;
+  font-size: medium !important;
 }
 
 .navBar1 a i {
@@ -35,9 +36,18 @@ body {
   color: black;
 }
 
+div .navbar-brand i {
+  font-size: 30px !important;
+}
+
 .navbar-brand i {
   /* color: blue; */
-  font-size: 30px;
+  font-size: 25px !important;
+}
+
+#navbarSupportedContent {
+  font-size: medium;
+  text-transform: uppercase;
 }
 
 .nav-item .nav-link i {
@@ -66,6 +76,13 @@ body {
   right: 0;
   overflow: hidden;
   /* width: 100%; */
+  font-size: medium !important;
+  background-color: lightslategray;
+}
+
+.fixFooter p {
+  color: black;
+  font-weight: 300 !important;
 }
 
 @media screen and (max-width: 991px) {
@@ -73,7 +90,6 @@ body {
   .fixFooter {
     display: none;
   }
-
 
   .nav-item span {
     position: absolute;
@@ -144,6 +160,11 @@ article {
 .cart_box img {
   width: 50px;
   height: 50px;
+}
+
+article div .cart_img p {
+  font-size: medium;
+  font-weight: 400 !important;
 }
 
 .cart_img {
