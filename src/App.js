@@ -15,10 +15,17 @@ import Footer from './component/footer';
 const App= () => {
   // const [show, setShow] = useState(true);
   const [cart, setCart] = useState([]);
+
   const handleClick = (item) => {
     if (cart.indexOf(item) !== -1) return;
     setCart([...cart, item]);
   };
+
+  const handleRemove = (item) => {
+    // const filteredCart = cart.filter((c) => c.id !== item.id)
+    // setCart(filteredCart);
+    setCart(cart.filter((c) => c.id !== item.id));
+  }
 
    const handleChange = (item, d) => {
     const ind = cart.indexOf(item);
@@ -34,7 +41,7 @@ const App= () => {
      <NavBar size={cart.length} />
       <Routes>
           {/* <Route path="/" element={  <NavBar size={cart.length} />} /> */}
-          <Route path="/" element={<ListAllProducts handleClick={handleClick} />} />
+          <Route path="/" element={<ListAllProducts cart={cart} handleClick={handleClick} handleRemove={handleRemove}/>} />
           <Route path="/desktop/:id" element={<DetailPage handleClick={handleClick} />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="/cart" element={<Cart cart={cart} setCart={setCart} handleChange={handleChange}/>} />

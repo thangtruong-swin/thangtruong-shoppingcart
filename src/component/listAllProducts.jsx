@@ -2,11 +2,11 @@ import React from 'react';
 import listProducts from '../data';
 import Cards from './cards';
 
-const ListAllProducts = ({handleClick}) => {
+const ListAllProducts = ({cart, handleClick, handleRemove}) => {
   return ( 
      <div className="listproducts container">
       {listProducts.map((item) => (
-            <Cards key={item.id} item={item} handleClick={handleClick} />
+        <Cards key={item.id} cart={cart} item={item} handleClick={handleClick} handleRemove={handleRemove}  />
       ))}
     </div>
    );
