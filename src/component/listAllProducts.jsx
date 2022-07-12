@@ -1,15 +1,21 @@
-import React from 'react';
-import listProducts from '../data';
-import Cards from './cards';
+import React from "react";
+import listProducts from "../data";
+import Cards from "./cards";
 
-const ListAllProducts = ({cart, handleClick, handleRemove}) => {
-  return ( 
-     <div className="listproducts container">
-      {listProducts.map((item) => (
-        <Cards key={item.id} cart={cart} item={item} handleClick={handleClick} handleRemove={handleRemove}  />
-      ))}
-    </div>
-   );
-}
- 
+const ListAllProducts = ({ cart, handleClick, handleRemove }) => {
+	return (
+		<div className="listproducts container">
+			{listProducts.map((item) => (
+				<Cards
+					key={item.id}
+					cart={cart}
+					item={item}
+					handleClick={handleClick}
+					handleRemove={handleRemove}
+				/>
+			))}
+		</div>
+	);
+};
+
 export default ListAllProducts;
