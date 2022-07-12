@@ -31,24 +31,26 @@ const App= () => {
     const ind = cart.indexOf(item);
     const arr = cart;
     arr[ind].quanity += d;
-
     if (arr[ind].quanity === 0) arr[ind].quanity = 1;
     setCart([...arr]);
    };
   
   return (
-    <div >
+    <div id="content-wrap">
      <NavBar size={cart.length} />
       <Routes>
           {/* <Route path="/" element={  <NavBar size={cart.length} />} /> */}
           <Route path="/" element={<ListAllProducts cart={cart} handleClick={handleClick} handleRemove={handleRemove}/>} />
-          <Route path="/desktop/:id" element={<DetailPage handleClick={handleClick} />} />
+          <Route path="/desktop/:id" element={<DetailPage cart={cart} handleClick={handleClick} handleRemove={handleRemove}/>} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="/cart" element={<Cart cart={cart} setCart={setCart} handleChange={handleChange}/>} />
           <Route path="newarrivalproducts" element={<NewArrivalProducts />} />
           <Route path="/onsale" element={<PageOnSale />} />
+          
       </Routes>
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

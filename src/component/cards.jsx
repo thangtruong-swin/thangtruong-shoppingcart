@@ -1,5 +1,4 @@
-// import React from 'react';
-import React, { useState } from "react";
+import React from 'react';
 
 const Cards = ({ cart, item, handleClick, handleRemove }) => {
     const { id, category, type, product, description, price, image, quanity } = item;
@@ -14,13 +13,13 @@ const Cards = ({ cart, item, handleClick, handleRemove }) => {
             <p className='mt-1 text-primary'>{category + " - "}{ type }</p>
             <p>{description}</p>
             <p className="fw-bold">Price - ${price.toFixed(2)}</p>
-            {console.log(cart.length)}
 
          {/* <button className='btn btn-success btn-sm'
             onClick={() => handleClick(item)}
             >Add to Cart</button> */}
         
-        {cart.includes(item) ? (
+        {
+          (cart || '').includes(item) ? (
            <button className='btn btn-danger btn-sm'
             onClick={() => handleRemove(item)}
             >Remove from Cart</button>

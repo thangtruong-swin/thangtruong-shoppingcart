@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
 
+
 body {
   padding: 0;
   margin: 0;
   font-family: 'Roboto Slab', serif;
   font-size: small;
+  height: 100%;
 }
 
 .navBar1 {
@@ -67,23 +69,37 @@ div .navbar-brand i {
   right: 400px;
 }
 
+#content-wrap {
+  padding-bottom: 6.5rem;
+  /* Footer height */
+}
 
 .fixFooter {
-  /* margin-top: 5rem; */
-  position: relative;
-  bottom: 0px;
+  /* margin-top: 2rem; */
+  position: absolute;
+  bottom: 0;
   left: 0px;
-  right: 0;
+  width: 100%;
   overflow: hidden;
+  height: 5rem;
   /* width: 100%; */
-  font-size: medium !important;
+  /* font-size: medium !important; */
   background-color: lightslategray;
+  font-size: small !important;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .fixFooter p {
   color: black;
   font-weight: 300 !important;
+
 }
+
+/* .fixFooter div {
+  display: flex;
+  flex-direction: row;
+} */
 
 @media screen and (max-width: 991px) {
 
@@ -110,7 +126,7 @@ div .navbar-brand i {
 }
 
 .listproducts {
-  /* min-height: 100vh; */
+  min-height: 100%;
   margin-top: 1rem;
   display: flex;
   flex-direction: row;

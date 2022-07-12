@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { getProductsType } from './services';
 import listProducts from '../data';
 
-export default function DetailPage({handleClick}) {
+export default function DetailPage({cart, handleClick, handleRemove}) {
   // let params = useParams();
   let { id } = useParams();
 
@@ -18,7 +18,9 @@ export default function DetailPage({handleClick}) {
         {/* <h2>Hello: {id}</h2> */}
       <div className="listproducts container">
         {filteredProducts.map((item) => (
-              <Cards key={item.id} item={item} handleClick={handleClick} />
+          // <Cards key={item.id} item={item} handleClick={handleClick} />
+        <Cards key={item.id} cart={cart} item={item} handleClick={handleClick} handleRemove={handleRemove}  />
+          
         ))}
       </div>
     </main>
