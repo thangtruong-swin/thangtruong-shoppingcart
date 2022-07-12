@@ -24,7 +24,7 @@ const Cards = ({ cart, item, handleClick, handleRemove }) => {
             onClick={() => handleRemove(item)}
             >Remove from Cart</button>
         ): (
-             <button className='btn btn-success btn-sm'
+             <button className='btn btn-success btn-sm '
             onClick={() => handleClick(item)}
             >Add to Cart</button>
           

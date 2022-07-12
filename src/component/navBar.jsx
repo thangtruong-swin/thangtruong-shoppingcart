@@ -7,8 +7,7 @@ const NavBar = ({ size }) => {
   let laptopCategories = getLaptopCategories();
   let mobileCategories = getMobileCategories();
   return (  
-    <div>
-      
+    <React.Fragment>
       <div className="navBar1 ">
         <a href="#">
           <i className="fa-solid fa-truck"></i>
@@ -39,9 +38,8 @@ const NavBar = ({ size }) => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-              <Link to="/newarrivalproducts" className="nav-link"> New Arrival</Link>
-              {/* <a className="nav-link "  href="#"> New Arrival</a> */}
-            </li>
+                <Link to="/newarrivalproducts" className="nav-link"> New Arrival</Link>
+              </li>
             <li className="nav-item">
               <Link to="/onsale" className="nav-link">On Sale</Link>
             </li>
@@ -53,7 +51,7 @@ const NavBar = ({ size }) => {
                   {desktopCategories.map((cat) => (
                     <div key={cat.name}>
                       <li>
-                        <a className="dropdown-item">
+                        {/* <a className="dropdown-item"> */}
                           <Link 
                               className='dropdown-item'
                               key={cat._id}
@@ -61,7 +59,7 @@ const NavBar = ({ size }) => {
                             >
                             {cat.name}
                           </Link>
-                        </a>
+                        {/* </a> */}
                       </li>
                     </div>
                   ))}
@@ -110,10 +108,7 @@ const NavBar = ({ size }) => {
           </div>
         </div>
       </nav>
-
-      {/* <ListAllProducts handleClick={handleClick} /> */}
-
-  </div>
+  </React.Fragment>
   );
 }
  
