@@ -4,7 +4,7 @@ import Cards from "./cards";
 
 const ListAllProducts = ({ cart, handleClick, handleRemove }) => {
 	return (
-		<div className="listproducts container">
+		<div className="listproducts container-sm">
 			{listProducts.map((item) => (
 				<Cards
 					key={item.id}

@@ -1,8 +1,7 @@
 import React from "react";
 
 const Cards = ({ cart, item, handleClick, handleRemove }) => {
-	const { id, category, type, product, description, price, image, quanity } =
-		item;
+	const { category, product, description, price, image } = item;
 
 	return (
 		<div className="cards">
@@ -13,7 +12,7 @@ const Cards = ({ cart, item, handleClick, handleRemove }) => {
 			<div className="details">
 				<p className="mt-1 text-primary">
 					{category + " - "}
-					{type}
+					{product}
 				</p>
 				<p>{description}</p>
 				<p className="fw-bold">Price - ${price.toFixed(2)}</p>

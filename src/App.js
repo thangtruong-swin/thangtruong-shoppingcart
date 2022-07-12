@@ -8,7 +8,7 @@ import Cart from "./component/cart";
 import NewArrivalProducts from "./component/newArrival";
 import PageNotFound from "./component/pageNotFound";
 import PageOnSale from "./component/onSale";
-import DetailPage from "./component/details";
+import DesktopCategory from "./component/desktopCategory";
 import Footer from "./component/footer";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -51,9 +51,9 @@ const App = () => {
 					}
 				/>
 				<Route
-					path="/desktop/:id"
+					path="/DesktopCategory/:id"
 					element={
-						<DetailPage
+						<DesktopCategory
 							cart={cart}
 							handleClick={handleClick}
 							handleRemove={handleRemove}

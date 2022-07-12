@@ -123,6 +123,7 @@ div .navbar-brand i {
   .text-bg-warning {
     display: none;
   }
+
 }
 
 .listproducts {
@@ -133,12 +134,11 @@ div .navbar-brand i {
   flex-wrap: wrap;
   gap: 1.5rem 4rem;
   align-content: center;
-  /* margin-left: 17rem; */
   justify-content: space-evenly;
 }
 
 .cards {
-  width: 220px;
+  width: 250px;
 }
 
 .cards:hover {

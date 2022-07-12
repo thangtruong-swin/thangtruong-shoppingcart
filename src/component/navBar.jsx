@@ -85,7 +85,7 @@ const NavBar = ({ size }) => {
 												<Link
 													className="dropdown-item"
 													key={cat._id}
-													to={`/desktop/${cat.name}`}
+													to={`/DesktopCategory/${cat.name}`}
 												>
 													{cat.name}
 												</Link>
