@@ -151,6 +151,32 @@ div .navbar-brand i {
   cursor: pointer;
 }
 
+.image_box .item-newArrvial span {
+  position: absolute !important;
+  font-weight: 500;
+  font-size: 10px !important;
+  text-transform: uppercase;
+  color: black;
+  margin-top: 7px;
+  margin-left: 105px;
+  width: 85px;
+  background-color: gold;
+  border: 1px solid gold;
+}
+
+.image_box .item-Onsale span {
+  position: absolute !important;
+  font-weight: 500;
+  font-size: 10px !important;
+  text-transform: uppercase;
+  color: white;
+  margin-top: 7px;
+  margin-left: 122px;
+  width: 70px;
+  background-color: red;
+  border: 1px solid red;
+}
+
 .image_box img {
   justify-content: center;
   width: 200px;
@@ -159,13 +185,11 @@ div .navbar-brand i {
   transition: all ease;
 }
 
-.image_box img:hover {
-  /* transform: rotate(-5deg); */
-  /* transform: skew(-5deg); */
+/* .image_box img:hover {
   transform: translate(0px, -5px);
   transition: 0.5s ease;
   box-shadow: 5px 5px gold;
-}
+} */
 
 .cards:hover {
   color: darkgoldenrod;

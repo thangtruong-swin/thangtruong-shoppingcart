@@ -3,12 +3,13 @@ import React from "react";
 import { useParams } from "react-router-dom";
 // import { getProductsType } from "./services";
 import listProducts from "../data";
+import { getListProducts } from "../data";
 
 export default function DetailPage({ cart, handleClick, handleRemove }) {
 	// let params = useParams();
 	let { id } = useParams();
 
-	const filteredProducts = listProducts.filter(function (item) {
+	const filteredProducts = getListProducts().filter(function (item) {
 		return item.type === id;
 	});
 	// const getItemsByType = getProductsType(id);

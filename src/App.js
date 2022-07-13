@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import NavBar from "./component/navBar";
+import { getListProducts } from "./data";
+
 import ListAllProducts from "./component/listAllProducts";
 import Cart from "./component/cart";
 import NewArrivalProducts from "./component/newArrival";

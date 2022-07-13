@@ -1,11 +1,27 @@
 import React from "react";
 
 const Cards = ({ cart, item, handleClick, handleRemove }) => {
-	const { category, product, description, price, image } = item;
+	const { newArrival, onSale, category, product, description, price, image } =
+		item;
 
 	return (
 		<div className="cards">
 			<div className="image_box">
+				{item.newArrival ? (
+					<div className="item-newArrvial">
+						<span className="badge badge-dark">New Arrival</span>
+					</div>
+				) : (
+					""
+				)}
+				{item.onSale ? (
+					<div className="item-Onsale">
+						<span className="badge badge-dark">ON SALE</span>
+					</div>
+				) : (
+					""
+				)}
+
 				<img src={image} alt="{type}" />
 			</div>
 			{/* className="details" */}

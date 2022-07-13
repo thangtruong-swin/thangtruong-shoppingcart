@@ -28,7 +28,7 @@ import HPLaptop2 from "./images/HP-Laptop2.jpg";
 import LaptopASUS from "./images/ASUS-Laptop.jpg";
 import LaptopASUS2 from "./images/ASUS-Laptop2.jpg";
 
-const listProducts = [
+export const listProducts = [
 	{
 		id: "AA0001",
 		category: "Desktop",
@@ -39,6 +39,7 @@ const listProducts = [
 		price: 1899,
 		image: iMacDesktop2,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0002",
@@ -50,6 +51,7 @@ const listProducts = [
 		price: 2099,
 		image: iMacDesktop2,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0003",
@@ -83,6 +85,7 @@ const listProducts = [
 		price: 2299,
 		image: iMacDesktop2,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "A10002",
@@ -105,6 +108,7 @@ const listProducts = [
 		price: 2799,
 		image: iMacDesktop2,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "A10004",
@@ -127,6 +131,7 @@ const listProducts = [
 		price: 2339,
 		image: iMacDesktop2,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "A10006",
@@ -160,6 +165,7 @@ const listProducts = [
 		price: 929,
 		image: MacMini,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0006",
@@ -182,6 +188,7 @@ const listProducts = [
 		price: 1499,
 		image: MacMini,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0008",
@@ -202,6 +209,7 @@ const listProducts = [
 		price: 2188,
 		image: MacMini,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA00081",
@@ -223,6 +231,7 @@ const listProducts = [
 		price: 2266,
 		image: MacMini,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA00083",
@@ -245,6 +254,7 @@ const listProducts = [
 		price: 2889,
 		image: MacMini,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0009",
@@ -255,6 +265,7 @@ const listProducts = [
 		price: 1999,
 		image: DellXPSDesktop,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0010",
@@ -265,6 +276,7 @@ const listProducts = [
 		price: 2099,
 		image: DellXPSDesktop3,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0011",
@@ -275,16 +287,18 @@ const listProducts = [
 		price: 2399,
 		image: DellXPSDesktop,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0012",
 		category: "Desktop",
 		type: "Dell",
 		product: "Dell XPS Gen12th",
-		description: "With 12-CoreCPU & 3070VGA 32GB Unified memory 2TBSSD",
-		price: 2699,
+		description: "With 12-CoreCPU & 3080VGA 32GB Unified memory 2TBSSD",
+		price: 3499,
 		image: DellXPSDesktop2,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA00120",
@@ -295,6 +309,7 @@ const listProducts = [
 		price: 1699,
 		image: DellXPSDesktop2,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA00121",
@@ -305,6 +320,7 @@ const listProducts = [
 		price: 1799,
 		image: DellXPSDesktop3,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA00122",
@@ -315,6 +331,7 @@ const listProducts = [
 		price: 1499,
 		image: DellXPSDesktop2,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA00123",
@@ -325,6 +342,7 @@ const listProducts = [
 		price: 1879,
 		image: DellXPSDesktop2,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA00124",
@@ -335,6 +353,7 @@ const listProducts = [
 		price: 2679,
 		image: DellXPSDesktop,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0013",
@@ -1038,4 +1057,25 @@ const listProducts = [
 	},
 ];
 
-export default listProducts;
+export function getListProducts() {
+	return myFunction(listProducts).filter((g) => g);
+}
+
+// export function getListProducts() {
+// 	return listProducts.filter((g) => g);
+// }
+const myFunction = function ShuffleListProducts(array) {
+	let curId = array.length;
+	// There remain elements to shuffle
+	while (0 !== curId) {
+		// Pick a remaining element
+		let randId = Math.floor(Math.random() * curId);
+		curId -= 1;
+		// Swap it with the current element.
+		let tmp = array[curId];
+		array[curId] = array[randId];
+		array[randId] = tmp;
+	}
+	console.log("ShuffleListProducts clicked");
+	return array;
+};
