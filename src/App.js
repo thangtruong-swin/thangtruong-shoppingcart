@@ -60,6 +60,16 @@ const App = () => {
 						/>
 					}
 				/>
+				<Route
+					path="/LaptopCategory/:id"
+					element={
+						<DesktopCategory
+							cart={cart}
+							handleClick={handleClick}
+							handleRemove={handleRemove}
+						/>
+					}
+				/>
 				<Route path="*" element={<PageNotFound />} />
 				<Route
 					path="/cart"

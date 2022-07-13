@@ -109,9 +109,13 @@ const NavBar = ({ size }) => {
 								<ul className="dropdown-menu" aria-labelledby="navbarDropdown">
 									{laptopCategories.map((lap) => (
 										<li key={lap._id}>
-											<a className="dropdown-item" key={lap.name}>
+											<Link
+												className="dropdown-item"
+												key={lap.name}
+												to={`/LaptopCategory/${lap.name}`}
+											>
 												{lap.name}
-											</a>
+											</Link>
 										</li>
 									))}
 								</ul>

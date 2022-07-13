@@ -8,12 +8,12 @@ export const desktopCategories = [
 ];
 
 export const laptopCategories = [
-	{ _id: "L001", name: "Macbook-Pro" },
-	{ _id: "L002", name: "Macbook-Air" },
-	{ _id: "L003", name: "Dell" },
-	{ _id: "L004", name: "HP" },
-	{ _id: "L005", name: "Acer" },
-	{ _id: "L006", name: "Asus" },
+	{ _id: "L001", name: "MacbookPro" },
+	{ _id: "L002", name: "MacbookAir" },
+	{ _id: "L003", name: "Dell XPS" },
+	{ _id: "L004", name: "HP-Omen" },
+	{ _id: "L005", name: "Laptop-Acer" },
+	{ _id: "L006", name: "ASus-Zenbook" },
 ];
 
 export const mobileCategories = [
