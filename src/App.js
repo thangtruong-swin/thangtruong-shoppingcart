@@ -10,7 +10,7 @@ import Cart from "./component/cart";
 import NewArrivalProducts from "./component/newArrival";
 import PageNotFound from "./component/pageNotFound";
 import PageOnSale from "./component/onSale";
-import DesktopCategory from "./component/desktopCategory";
+import Category from "./component/category";
 import Footer from "./component/footer";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -55,7 +55,7 @@ const App = () => {
 				<Route
 					path="/DesktopCategory/:id"
 					element={
-						<DesktopCategory
+						<Category
 							cart={cart}
 							handleClick={handleClick}
 							handleRemove={handleRemove}
@@ -65,7 +65,7 @@ const App = () => {
 				<Route
 					path="/LaptopCategory/:id"
 					element={
-						<DesktopCategory
+						<Category
 							cart={cart}
 							handleClick={handleClick}
 							handleRemove={handleRemove}
