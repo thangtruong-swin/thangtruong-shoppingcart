@@ -1,7 +1,7 @@
 import React from "react";
 
 const Cards = ({ cart, item, handleClick, handleRemove }) => {
-	const { newArrival, onSale, category, product, description, price, image } =
+	const { newArrival, category, product, description, price, image, onSale } =
 		item;
 
 	return (
@@ -16,7 +16,7 @@ const Cards = ({ cart, item, handleClick, handleRemove }) => {
 				)}
 				{item.onSale ? (
 					<div className="item-Onsale">
-						<span className="badge badge-dark">ON SALE</span>
+						<span className="badge badge-dark">ON SALE 10%</span>
 					</div>
 				) : (
 					""
@@ -31,7 +31,21 @@ const Cards = ({ cart, item, handleClick, handleRemove }) => {
 					{product}
 				</p>
 				<p>{description}</p>
-				<p className="fw-bold">Price - ${price.toFixed(2)}</p>
+				<p className="">
+					Price - $
+					{item.onSale ? (
+						<span>
+							<span className="text-decoration-line-through font-italic">
+								{price}
+							</span>
+							<span className="mx-2">
+								${Math.round(price - price * 0.1).toFixed(2)}
+							</span>
+						</span>
+					) : (
+						price.toFixed(2)
+					)}
+				</p>
 
 				{/* <button className='btn btn-success btn-sm'
             onClick={() => handleClick(item)}

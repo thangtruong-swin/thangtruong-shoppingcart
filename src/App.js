@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./component/navBar";
 import ListAllProducts from "./component/listAllProducts";
@@ -15,7 +15,7 @@ import { getListProducts } from "./data";
 
 const App = () => {
 	// const [show, setShow] = useState(true);
-	const searchQuery = "";
+	const inputRef = useRef(null);
 	const [searchInput, setSearchInput] = useState("");
 	const [cart, setCart] = useState([]);
 	const [listProducts, setListProducts] = useState([]);
@@ -54,12 +54,18 @@ const App = () => {
 			setListProducts(getListProducts());
 		}
 	};
+
+	const handleclearInput = () => {
+		document.getElementById("search").value = "";
+		setListProducts(getListProducts());
+	};
 	return (
 		<div id="content-wrap">
 			<NavBar
 				size={cart.length}
 				value={searchInput}
 				searchItems={handleSearchItems}
+				clearInput={handleclearInput}
 			/>
 			<Routes>
 				{/* <Route path="/" element={  <NavBar size={cart.length} />} /> */}

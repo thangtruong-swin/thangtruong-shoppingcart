@@ -85,7 +85,6 @@ export const listProducts = [
 		price: 2299,
 		image: iMacDesktop2,
 		quanity: 1,
-		newArrival: true,
 	},
 	{
 		id: "A10002",
@@ -97,6 +96,7 @@ export const listProducts = [
 		price: 2499,
 		image: iMacDesktop,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "A10003",
@@ -143,6 +143,7 @@ export const listProducts = [
 		price: 2669,
 		image: iMacDesktop,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "A10007",
@@ -177,6 +178,7 @@ export const listProducts = [
 		price: 1199,
 		image: MacMini2,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0007",
@@ -276,7 +278,6 @@ export const listProducts = [
 		price: 2099,
 		image: DellXPSDesktop3,
 		quanity: 1,
-		newArrival: true,
 	},
 	{
 		id: "AA0011",
@@ -287,7 +288,6 @@ export const listProducts = [
 		price: 2399,
 		image: DellXPSDesktop,
 		quanity: 1,
-		newArrival: true,
 	},
 	{
 		id: "AA0012",
@@ -309,7 +309,6 @@ export const listProducts = [
 		price: 1699,
 		image: DellXPSDesktop2,
 		quanity: 1,
-		onSale: true,
 	},
 	{
 		id: "AA00121",
@@ -331,7 +330,6 @@ export const listProducts = [
 		price: 1499,
 		image: DellXPSDesktop2,
 		quanity: 1,
-		onSale: true,
 	},
 	{
 		id: "AA00123",
@@ -364,6 +362,7 @@ export const listProducts = [
 		price: 2299,
 		image: HPDesktop2,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0014",
@@ -384,6 +383,7 @@ export const listProducts = [
 		price: 2799,
 		image: HPDesktop2,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0016",
@@ -394,6 +394,7 @@ export const listProducts = [
 		price: 3299,
 		image: HPDesktop,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0017",
@@ -414,6 +415,7 @@ export const listProducts = [
 		price: 1689,
 		image: HPDesktop2,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0019",
@@ -424,6 +426,7 @@ export const listProducts = [
 		price: 1889,
 		image: HPDesktop,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0020",
@@ -454,6 +457,7 @@ export const listProducts = [
 		price: 1229,
 		image: AcerDesktop,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA00220",
@@ -464,6 +468,7 @@ export const listProducts = [
 		price: 3699,
 		image: ACERDESKTOPPREDATOR,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0023",
@@ -484,6 +489,7 @@ export const listProducts = [
 		price: 1689,
 		image: AcerDesktop,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0025",
@@ -494,6 +500,7 @@ export const listProducts = [
 		price: 1889,
 		image: AcerDesktop,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0026",
@@ -504,6 +511,7 @@ export const listProducts = [
 		price: 2009,
 		image: AcerDesktop,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0027",
@@ -524,6 +532,7 @@ export const listProducts = [
 		price: 2559,
 		image: AcerDesktop,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0029",
@@ -534,6 +543,7 @@ export const listProducts = [
 		price: 2779,
 		image: AcerDesktop,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0030",
@@ -564,6 +574,7 @@ export const listProducts = [
 		price: 1299,
 		image: ASUSDesktop3,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0033",
@@ -584,6 +595,7 @@ export const listProducts = [
 		price: 1889,
 		image: ASUSDesktop,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0035",
@@ -594,6 +606,7 @@ export const listProducts = [
 		price: 1999,
 		image: ASUSDesktop2,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0036",
@@ -604,6 +617,7 @@ export const listProducts = [
 		price: 2099,
 		image: ASUSDesktop3,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0037",
@@ -624,6 +638,7 @@ export const listProducts = [
 		price: 2499,
 		image: ASUSDesktop2,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0039",
@@ -634,6 +649,7 @@ export const listProducts = [
 		price: 2599,
 		image: ASUSDesktop3,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0040",
@@ -654,6 +670,7 @@ export const listProducts = [
 		price: 2999,
 		image: ASUSDesktop,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0042",
@@ -674,6 +691,7 @@ export const listProducts = [
 		price: 1789,
 		image: MacbookProLaptop,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0044",
@@ -684,6 +702,7 @@ export const listProducts = [
 		price: 2189,
 		image: MacbookProLaptop2,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0045",
@@ -714,6 +733,7 @@ export const listProducts = [
 		price: 2569,
 		image: MacbookProLaptop2,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0048",
@@ -734,6 +754,7 @@ export const listProducts = [
 		price: 2769,
 		image: MacbookProLaptop2,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0050",
@@ -754,6 +775,7 @@ export const listProducts = [
 		price: 4469,
 		image: MacbookProLaptop,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA00521",
@@ -764,6 +786,7 @@ export const listProducts = [
 		price: 1229,
 		image: MacbookAir,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0052",
@@ -784,6 +807,7 @@ export const listProducts = [
 		price: 1829,
 		image: MacbookAir2,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0054",
@@ -804,6 +828,7 @@ export const listProducts = [
 		price: 2429,
 		image: MacbookAir,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0056",
@@ -824,6 +849,7 @@ export const listProducts = [
 		price: 3019,
 		image: MacbookAir2,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0058",
@@ -844,6 +870,7 @@ export const listProducts = [
 		price: 1889,
 		image: MacbookAir2,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0060",
@@ -864,6 +891,7 @@ export const listProducts = [
 		price: 1689,
 		image: DellLaptop,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0062",
@@ -874,6 +902,7 @@ export const listProducts = [
 		price: 1999,
 		image: DellLaptop,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0063",
@@ -884,6 +913,7 @@ export const listProducts = [
 		price: 2899,
 		image: DellLaptop,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0064",
@@ -894,6 +924,7 @@ export const listProducts = [
 		price: 3099,
 		image: DellLaptop2,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0065",
@@ -914,6 +945,7 @@ export const listProducts = [
 		price: 1999,
 		image: AcerLaptop,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0067",
@@ -944,6 +976,7 @@ export const listProducts = [
 		price: 2889,
 		image: AcerLaptop,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0070",
@@ -954,6 +987,7 @@ export const listProducts = [
 		price: 3009,
 		image: AcerLaptop2,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0071",
@@ -964,6 +998,7 @@ export const listProducts = [
 		price: 3339,
 		image: AcerLaptop2,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0072",
@@ -974,6 +1009,7 @@ export const listProducts = [
 		price: 3559,
 		image: AcerLaptop2,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0073",
@@ -984,6 +1020,7 @@ export const listProducts = [
 		price: 1889,
 		image: HPLaptop,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0074",
@@ -994,6 +1031,7 @@ export const listProducts = [
 		price: 2009,
 		image: HPLaptop,
 		quanity: 1,
+		newArrival: true,
 	},
 	{
 		id: "AA0075",
@@ -1014,6 +1052,7 @@ export const listProducts = [
 		price: 2549,
 		image: HPLaptop2,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0077",
@@ -1024,6 +1063,7 @@ export const listProducts = [
 		price: 1889,
 		image: LaptopASUS,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0078",
@@ -1034,6 +1074,7 @@ export const listProducts = [
 		price: 2089,
 		image: LaptopASUS,
 		quanity: 1,
+		onSale: true,
 	},
 	{
 		id: "AA0079",
@@ -1054,6 +1095,7 @@ export const listProducts = [
 		price: 2559,
 		image: LaptopASUS2,
 		quanity: 1,
+		newArrival: true,
 	},
 ];
 

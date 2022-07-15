@@ -6,7 +6,7 @@ import {
 	getMobileCategories,
 } from "../fakeCategories";
 
-const NavBar = ({ size, searchInput, searchItems }) => {
+const NavBar = ({ size, searchInput, searchItems, clearInput }) => {
 	let desktopCategories = getDesktopCategories();
 	let laptopCategories = getLaptopCategories();
 	let mobileCategories = getMobileCategories();
@@ -35,7 +35,7 @@ const NavBar = ({ size, searchInput, searchItems }) => {
 			</div>
 
 			<nav className="navbar navbar-expand-lg bg-light ">
-				<div className="container-fluid">
+				<div className="container-fluid ">
 					<Link to="/" className="navbar-brand">
 						<i className="fa-brands fa-react"></i>
 					</Link>
@@ -66,12 +66,15 @@ const NavBar = ({ size, searchInput, searchItems }) => {
 
 								// onChange={searchItems}
 							/>
-							{/* <button
-								className="btn btn-outline-warning text-dark"
-								type="submit"
+							<button
+								type="button"
+								className=""
+								ass="close"
+								aria-label="Close"
+								onClick={clearInput}
 							>
-								Search
-							</button> */}
+								<span aria-hidden="true">&times;</span>
+							</button>
 						</form>
 						<ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
 							<li className="nav-item mx-3">
@@ -166,7 +169,7 @@ const NavBar = ({ size, searchInput, searchItems }) => {
 								<Link to="/cart" className="nav-link ">
 									<i className="fa-solid fa-cart-shopping "></i>
 								</Link>
-								<span className="position-absolute badge rounded-pill 	text-bg-info mx-4">
+								<span className="navbar-brand nav-item position-absolute badge rounded-pill 	text-bg-info mx-4 ">
 									{size}
 								</span>
 							</li>

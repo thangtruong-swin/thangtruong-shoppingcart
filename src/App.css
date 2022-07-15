@@ -109,11 +109,11 @@ div .navbar-brand i {
   }
 
   .nav-item span {
-    position: absolute;
+    /* position: absolute; */
     margin-top: 10px;
     font-size: 12px;
-    top: 0;
-    right: 48%;
+    /* top: 0; */
+    right: 46%;
   }
 
   .nav-item .nav-link i {
@@ -126,6 +126,14 @@ div .navbar-brand i {
   }
 
   .searchform {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav-item span {
+    font-size: 12px;
+    right: 44%;
     margin-top: 10px;
   }
 }
@@ -171,7 +179,7 @@ div .navbar-brand i {
   color: white;
   /* margin-top: 7px; */
   margin-left: 50px;
-  width: 70px;
+  width: 75px;
   background-color: red;
   border: 1px solid red;
 }
