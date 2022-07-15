@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-// import { getListProducts } from "../data";
 import Cards from "./cards";
 // import { ShuffleListProducts } from "./shuffleListProducts";
 

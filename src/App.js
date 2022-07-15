@@ -45,8 +45,6 @@ const App = () => {
 
 	const handleSearchItems = (searchInput) => {
 		setSearchInput(searchInput);
-		console.log("searchInput length: " + searchInput.length);
-
 		if (searchInput.length > 0) {
 			const filtered = listProducts.filter((item) =>
 				item.type.toLowerCase().startsWith(searchInput.toLowerCase())

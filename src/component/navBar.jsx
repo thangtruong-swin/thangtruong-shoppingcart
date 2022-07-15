@@ -12,24 +12,21 @@ const NavBar = ({ size, searchInput, searchItems }) => {
 	let mobileCategories = getMobileCategories();
 	return (
 		<React.Fragment>
-			<div className="navBar1 ">
-				<a href="#">
-					<i className="fa-solid fa-truck"></i>
-					Free Delivery
-				</a>
-				<a href="#">
-					<i className="fa-solid fa-person-walking-arrow-loop-left"></i>
-					Free Return
-				</a>
+			<div className="navBar1 bg-success text-white">
+				<i className="fa-solid fa-truck ">
+					<span className="ms-2">Free Delivery</span>
+				</i>
+				<i className="fa-solid fa-person-walking-arrow-loop-left">
+					<span className="ms-2">Free Return</span>
+				</i>
+
 				<div className="navbar1-right">
-					<a href="#">
-						<i className="fa-solid fa-envelope"></i>
-						Contact Us
-					</a>
-					<a href="#">
-						<i className="fa-solid fa-user"></i>
-						Login/Register
-					</a>
+					<i className="fa-solid fa-envelope">
+						<span className="ms-2">Contact Us</span>
+					</i>
+					<i className="fa-solid fa-user">
+						<span className="ms-2">Login/Register</span>
+					</i>
 				</div>
 			</div>
 
@@ -55,7 +52,7 @@ const NavBar = ({ size, searchInput, searchItems }) => {
 						<span className="navbar-toggler-icon"></span>
 					</button>
 					<div className="collapse navbar-collapse" id="navbarSupportedContent">
-						<form className="d-flex">
+						<form className="d-flex searchform">
 							<input
 								className="form-control me-2"
 								type="text"
@@ -76,19 +73,19 @@ const NavBar = ({ size, searchInput, searchItems }) => {
 								Search
 							</button> */}
 						</form>
-						<ul className="navbar-nav me-auto mb-2 mb-lg-0">
-							<li className="nav-item">
+						<ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
+							<li className="nav-item mx-3">
 								<Link to="/newarrivalproducts" className="nav-link">
 									{" "}
 									New Arrival
 								</Link>
 							</li>
-							<li className="nav-item">
+							<li className="nav-item mx-3">
 								<Link to="/onsale" className="nav-link">
 									On Sale
 								</Link>
 							</li>
-							<li className="nav-item dropdown">
+							<li className="nav-item dropdown mx-3">
 								<a
 									className="nav-link dropdown-toggle"
 									href="#"
@@ -99,7 +96,7 @@ const NavBar = ({ size, searchInput, searchItems }) => {
 								>
 									Desktop
 								</a>
-								<ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+								<ul className="dropdown-menu " aria-labelledby="navbarDropdown">
 									{desktopCategories.map((cat) => (
 										<div key={cat.name}>
 											<li>
@@ -117,7 +114,7 @@ const NavBar = ({ size, searchInput, searchItems }) => {
 									))}
 								</ul>
 							</li>
-							<li className="nav-item dropdown">
+							<li className="nav-item dropdown mx-3">
 								<a
 									className="nav-link dropdown-toggle"
 									href="#"
@@ -143,7 +140,7 @@ const NavBar = ({ size, searchInput, searchItems }) => {
 								</ul>
 							</li>
 
-							<li className="nav-item dropdown">
+							<li className="nav-item dropdown mx-3">
 								<a
 									className="nav-link dropdown-toggle"
 									href="#"
@@ -167,27 +164,13 @@ const NavBar = ({ size, searchInput, searchItems }) => {
 
 							<li className="navbar-brand nav-item">
 								<Link to="/cart" className="nav-link ">
-									<i className="fa-solid fa-cart-shopping"></i>
+									<i className="fa-solid fa-cart-shopping "></i>
 								</Link>
-								<span className="position-absolute badge rounded-pill text-bg-info">
+								<span className="position-absolute badge rounded-pill 	text-bg-info mx-4">
 									{size}
 								</span>
 							</li>
 						</ul>
-						{/* <form className="d-flex" role="search">
-							<input
-								className="form-control me-2"
-								type="search"
-								placeholder="Search"
-								aria-label="Search"
-							/>
-							<button
-								className="btn btn-outline-warning text-dark"
-								type="submit"
-							>
-								Search
-							</button>
-						</form> */}
 					</div>
 				</div>
 			</nav>
