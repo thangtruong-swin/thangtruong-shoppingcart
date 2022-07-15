@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-import { getListProducts, ShuffleListProducts } from "../data";
+// import { getListProducts } from "../data";
 import Cards from "./cards";
 // import { ShuffleListProducts } from "./shuffleListProducts";
 
@@ -22,14 +22,23 @@ import Cards from "./cards";
 // 	);
 // };
 
-export function ListAllProducts({ cart, handleClick, handleRemove }) {
-	const [listProducts, setListProducts] = useState([]);
+export function ListAllProducts({
+	cart,
+	handleClick,
+	handleRemove,
+	listProducts,
+}) {
+	// const [listProducts, setListProducts] = useState([]);
 	// setListProducts(getListProducts());
-
 	// const newLists = ShuffleListProducts(getListProducts());
+	// useEffect(() => {
+	// 	setListProducts(getListProducts());
+	// 	// console.log("ListAllProducts called");
+	// }, []);
+
 	return (
 		<div className="listproducts container-sm">
-			{getListProducts().map((item) => (
+			{listProducts.map((item) => (
 				<Cards
 					key={item.id}
 					cart={cart}

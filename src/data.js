@@ -1057,13 +1057,13 @@ export const listProducts = [
 	},
 ];
 
-export function getListProducts() {
-	return myFunction(listProducts).filter((g) => g);
-}
-
 // export function getListProducts() {
-// 	return listProducts.filter((g) => g);
+// 	return myFunction(listProducts).filter((g) => g);
 // }
+
+export function getListProducts() {
+	return listProducts.filter((g) => g);
+}
 const myFunction = function ShuffleListProducts(array) {
 	let curId = array.length;
 	// There remain elements to shuffle

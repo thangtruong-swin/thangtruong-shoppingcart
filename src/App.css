@@ -43,7 +43,7 @@ div .navbar-brand i {
 }
 
 .navbar-brand i {
-  /* color: blue; */
+  /* color: cyan; */
   font-size: 25px !important;
 }
 
@@ -179,10 +179,13 @@ div .navbar-brand i {
 
 .image_box img {
   justify-content: center;
-  width: 200px;
-  height: 140px;
+  width: 120px;
+  height: 80px;
   cursor: pointer;
   transition: all ease;
+  /* text-align: right; */
+  /* justify-content: right; */
+  justify-items: center;
 }
 
 /* .image_box img:hover {

@@ -1,10 +1,7 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-
 import NavBar from "./component/navBar";
-import { getListProducts } from "./data";
-
 import ListAllProducts from "./component/listAllProducts";
 import Cart from "./component/cart";
 import NewArrivalProducts from "./component/newArrival";
@@ -12,11 +9,20 @@ import PageNotFound from "./component/pageNotFound";
 import PageOnSale from "./component/onSale";
 import Category from "./component/category";
 import Footer from "./component/footer";
+import { getListProducts } from "./data";
+
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
 	// const [show, setShow] = useState(true);
+	const searchQuery = "";
+	const [searchInput, setSearchInput] = useState("");
 	const [cart, setCart] = useState([]);
+	const [listProducts, setListProducts] = useState([]);
+	useEffect(() => {
+		setListProducts(getListProducts());
+		// console.log("ListAllProducts called");
+	}, []);
 
 	const handleClick = (item) => {
 		if (cart.indexOf(item) !== -1) return;
@@ -37,9 +43,26 @@ const App = () => {
 		setCart([...arr]);
 	};
 
+	const handleSearchItems = (searchInput) => {
+		setSearchInput(searchInput);
+		console.log("searchInput length: " + searchInput.length);
+
+		if (searchInput.length > 0) {
+			const filtered = listProducts.filter((item) =>
+				item.type.toLowerCase().startsWith(searchInput.toLowerCase())
+			);
+			setListProducts(filtered);
+		} else {
+			setListProducts(getListProducts());
+		}
+	};
 	return (
 		<div id="content-wrap">
-			<NavBar size={cart.length} />
+			<NavBar
+				size={cart.length}
+				value={searchInput}
+				searchItems={handleSearchItems}
+			/>
 			<Routes>
 				{/* <Route path="/" element={  <NavBar size={cart.length} />} /> */}
 				<Route
@@ -49,6 +72,7 @@ const App = () => {
 							cart={cart}
 							handleClick={handleClick}
 							handleRemove={handleRemove}
+							listProducts={listProducts}
 						/>
 					}
 				/>

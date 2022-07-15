@@ -6,7 +6,7 @@ import {
 	getMobileCategories,
 } from "../fakeCategories";
 
-const NavBar = ({ size }) => {
+const NavBar = ({ size, searchInput, searchItems }) => {
 	let desktopCategories = getDesktopCategories();
 	let laptopCategories = getLaptopCategories();
 	let mobileCategories = getMobileCategories();
@@ -42,6 +42,7 @@ const NavBar = ({ size }) => {
 					<Link to="/" className="navbar-brand">
 						<i className="fa-brands fa-react"></i>
 					</Link>
+
 					<button
 						className="navbar-toggler"
 						type="button"
@@ -54,6 +55,27 @@ const NavBar = ({ size }) => {
 						<span className="navbar-toggler-icon"></span>
 					</button>
 					<div className="collapse navbar-collapse" id="navbarSupportedContent">
+						<form className="d-flex">
+							<input
+								className="form-control me-2"
+								type="text"
+								name="search"
+								id="search"
+								value={searchInput}
+								placeholder="Search . . ."
+								aria-label="Search"
+								// onChange={(e) => onChange(e.currentTarget.value)}
+								onChange={(e) => searchItems(e.currentTarget.value)}
+
+								// onChange={searchItems}
+							/>
+							{/* <button
+								className="btn btn-outline-warning text-dark"
+								type="submit"
+							>
+								Search
+							</button> */}
+						</form>
 						<ul className="navbar-nav me-auto mb-2 mb-lg-0">
 							<li className="nav-item">
 								<Link to="/newarrivalproducts" className="nav-link">
@@ -152,7 +174,7 @@ const NavBar = ({ size }) => {
 								</span>
 							</li>
 						</ul>
-						<form className="d-flex" role="search">
+						{/* <form className="d-flex" role="search">
 							<input
 								className="form-control me-2"
 								type="search"
@@ -165,7 +187,7 @@ const NavBar = ({ size }) => {
 							>
 								Search
 							</button>
-						</form>
+						</form> */}
 					</div>
 				</div>
 			</nav>
