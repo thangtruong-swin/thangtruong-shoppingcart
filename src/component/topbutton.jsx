@@ -1,7 +1,13 @@
-import { useEffect } from "react";
+import { useRef, useEffect } from "react";
 
-function TopButton() {
-	var mybutton = document.getElementById("myBtn");
+const TopButton = () => {
+	const ref = useRef(null);
+
+	useEffect(() => {
+		//Runs only on the first render
+		const mybutton = document.getElementById("myBtn");
+		const mybutton2 = ref.current;
+	}, []);
 
 	// When the user scrolls down 20px from the top of the document, show the button
 	window.onscroll = () => {
@@ -14,31 +20,32 @@ function TopButton() {
 			document.body.scrollTop > 20 ||
 			document.documentElement.scrollTop > 20
 		) {
-			mybutton.style.display = "block";
+			ref.current.style.display = "block";
 		} else {
-			mybutton.style.display = "none";
+			ref.current.style.display = "none";
 		}
 	};
 
 	// When the user clicks on the button, scroll to the top of the document
 	const topFunction = () => {
-		// alert("You Clicked");
 		document.body.scrollTop = 0;
 		document.documentElement.scrollTop = 0;
 	};
 	return (
 		<div>
 			<button
+				ref={ref}
 				type="button"
+				id="myBtn"
 				className="btn btn-outline-info"
 				onClick={() => topFunction()}
-				id="myBtn"
 				title="Go to top"
 			>
 				TOP
 			</button>
+			{window.onscroll}
 		</div>
 	);
-}
+};
 
 export default TopButton;

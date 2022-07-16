@@ -28,6 +28,7 @@ export default function DetailPage({ cart, handleClick, handleRemove }) {
 					/>
 				))}
 			</div>
+
 			<TopButton />
 		</main>
 	);
