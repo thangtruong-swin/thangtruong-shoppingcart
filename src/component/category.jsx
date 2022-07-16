@@ -1,9 +1,8 @@
 import Cards from "./cards";
 import React from "react";
 import { useParams } from "react-router-dom";
-// import { getProductsType } from "./services";
-import listProducts from "../data";
 import { getListProducts } from "../data";
+import TopButton from "./topbutton";
 
 export default function DetailPage({ cart, handleClick, handleRemove }) {
 	// let params = useParams();
@@ -29,6 +28,7 @@ export default function DetailPage({ cart, handleClick, handleRemove }) {
 					/>
 				))}
 			</div>
+			<TopButton />
 		</main>
 	);
 }
