@@ -59,6 +59,13 @@ const App = () => {
 		document.getElementById("search").value = "";
 		setListProducts(getListProducts());
 	};
+
+	// When the user clicks on the button, scroll to the top of the document
+	// const handletopFunction = () => {
+	// 	alert("YAH");
+	// 	document.body.scrollTop = 0;
+	// 	document.documentElement.scrollTop = 0;
+	// };
 	return (
 		<div id="content-wrap">
 			<NavBar
@@ -77,6 +84,7 @@ const App = () => {
 							handleClick={handleClick}
 							handleRemove={handleRemove}
 							listProducts={listProducts}
+							// topFunction={handletopFunction}
 						/>
 					}
 				/>

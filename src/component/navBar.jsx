@@ -37,6 +37,8 @@ const NavBar = ({ size, searchInput, searchItems, clearInput }) => {
 			<nav className="navbar navbar-expand-lg bg-light ">
 				<div className="container-fluid ">
 					<Link to="/" className="navbar-brand">
+						{/* <i className="fa-solid fa-house-blank"></i> */}
+						{/* <i class="fa-solid fa-house-chimney-user"></i> */}
 						<i className="fa-brands fa-react"></i>
 					</Link>
 
@@ -68,12 +70,12 @@ const NavBar = ({ size, searchInput, searchItems, clearInput }) => {
 							/>
 							<button
 								type="button"
-								className=""
 								ass="close"
 								aria-label="Close"
 								onClick={clearInput}
 							>
-								<span aria-hidden="true">&times;</span>
+								<i className="fa-solid fa-xmark "></i>
+								{/* <span aria-hidden="true">&times;</span> */}
 							</button>
 						</form>
 						<ul className="navbar-nav me-auto mb-2 mb-lg-0 ">

@@ -21,7 +21,6 @@ const Cards = ({ cart, item, handleClick, handleRemove }) => {
 				) : (
 					""
 				)}
-
 				<img src={image} alt="{type}" />
 			</div>
 			{/* className="details" */}
@@ -31,12 +30,12 @@ const Cards = ({ cart, item, handleClick, handleRemove }) => {
 					{product}
 				</p>
 				<p>{description}</p>
-				<p className="">
+				<p>
 					Price - $
 					{item.onSale ? (
 						<span>
 							<span className="text-decoration-line-through font-italic">
-								{price}
+								<del>{price}</del>
 							</span>
 							<span className="mx-2">
 								${Math.round(price - price * 0.1).toFixed(2)}
@@ -53,7 +52,7 @@ const Cards = ({ cart, item, handleClick, handleRemove }) => {
 
 				{(cart || "").includes(item) ? (
 					<button
-						className="btn btn-danger btn-sm"
+						className="btn btn-danger btn-sm "
 						onClick={() => handleRemove(item)}
 					>
 						Remove from Cart

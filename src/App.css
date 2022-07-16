@@ -102,6 +102,37 @@ div .navbar-brand i {
 
 }
 
+.searchform {
+  display: block;
+  position: relative;
+  width: 17%;
+  height: 36px;
+  outline: none;
+  border: none;
+}
+
+.searchform button {
+  position: absolute;
+  /* padding: 4px 0; */
+  /* top: 2px; */
+  bottom: 5px;
+  right: 0;
+  background-color: white;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  /* height: 35px; */
+  margin-right: 0.8rem;
+  border-radius: 4rem;
+  color: green;
+}
+
+.searchform button i {
+  background-color: none;
+  outline: none;
+  border: none;
+}
+
 @media screen and (max-width: 991px) {
 
   .fixFooter {
@@ -127,6 +158,7 @@ div .navbar-brand i {
 
   .searchform {
     margin-top: 10px;
+    width: 100%;
   }
 }
 
@@ -151,6 +183,10 @@ div .navbar-brand i {
 
 .cards {
   width: 250px;
+}
+
+.cards .details button {
+  font-size: smaller;
 }
 
 .cards:hover {
@@ -275,4 +311,24 @@ article div .cart_img p {
   font-size: 2rem;
   color: green;
   font-weight: bold;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 15px;
+  /* border: none;
+  outline: none;
+  background-color: red;
+  color: white; */
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#myBtn:hover {
+  background-color: #555;
 }
