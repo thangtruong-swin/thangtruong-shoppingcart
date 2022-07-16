@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const TopButton = () => {
+function TopButton() {
 	var mybutton = document.getElementById("myBtn");
 
 	// When the user scrolls down 20px from the top of the document, show the button
@@ -25,7 +25,6 @@ const TopButton = () => {
 		// alert("You Clicked");
 		document.body.scrollTop = 0;
 		document.documentElement.scrollTop = 0;
-		mybutton.style.display = "none";
 	};
 	return (
 		<div>
@@ -40,6 +39,6 @@ const TopButton = () => {
 			</button>
 		</div>
 	);
-};
+}
 
 export default TopButton;
