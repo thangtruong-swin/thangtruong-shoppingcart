@@ -31,18 +31,18 @@ const Cards = ({ cart, item, handleClick, handleRemove }) => {
 				</p>
 				<p>{description}</p>
 				<p>
-					Price - $
+					Price -
 					{item.onSale ? (
 						<span>
 							<span className="text-decoration-line-through font-italic">
-								<del>{price}</del>
+								<del className="opacity-50">${price.toFixed(2)}</del>
 							</span>
-							<span className="mx-2">
+							<span className="mx-2 text-danger">
 								${Math.round(price - price * 0.1).toFixed(2)}
 							</span>
 						</span>
 					) : (
-						price.toFixed(2)
+						<span>${price.toFixed(2)}</span>
 					)}
 				</p>
 
